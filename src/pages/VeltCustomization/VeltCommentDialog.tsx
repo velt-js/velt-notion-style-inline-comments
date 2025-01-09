@@ -56,7 +56,7 @@ const VeltCommentDialog = () => {
           <VeltCommentDialogWireframe.Threads>
             <VeltCommentDialogWireframe.ThreadCard>
               <div
-                className="notion-style-velt-thread-card w-full box-border flex flex-col hover:bg-gray-100 hover:rounded"
+                className="notion-style-velt-thread-card w-full box-border flex flex-col"
               >
                 <div className="flex items-center justify-between self-stretch gap-1.5">
                   <div className="flex items-center self-stretch gap-1.5">

@@ -24,6 +24,13 @@ Velt Comment Dialog Styling
   }
 }
 
+.notion-style-velt-thread-card {
+  &:hover {
+    background: var(--Gray-100, #f7f8fa) !important;
+    border-radius: 4px !important;
+  }
+}
+
 .notion-style-velt-context-data-container:has(app-data:empty) {
   display: none !important;
 }
@@ -133,8 +140,8 @@ Velt Core Styling
     0 10px 20px 0 rgba(27, 30, 34, 0.16);
   overflow: hidden;
   padding: 0 !important;
-  height: 99% !important;
-  margin: 4px !important;
+  height: 97.5% !important;
+  margin: 8px !important;
 }
 
 .velt-sidebar {
@@ -547,6 +554,10 @@ app-comment-dialog-thread-card-reaction-tool {
     0 4px 10px 0 rgba(18, 29, 43, 0.1),
     0 0 2px 0 rgba(21, 30, 40, 0.2),
     0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+}
+
+.velt-autocomplete--contact-chip {
+  font-size: inherit !important;
 }
 
 .velt-autocomplete-panel--autocomplete .velt-autocomplete-panel--container .mat-mdc-option.mat-mdc-option-active {
