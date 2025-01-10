@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* ========================================================
 Velt Comment Dialog Styling
 ======================================================== */
@@ -36,8 +35,7 @@ Velt Comment Dialog Styling
 }
 
 .notion-style-velt-thread-card-actions {
-  box-shadow:
-    0 0 1px 0 rgba(69, 81, 97, 0.24),
+  box-shadow: 0 0 1px 0 rgba(69, 81, 97, 0.24),
     0 2px 4px 0 rgba(69, 81, 97, 0.14) !important;
 }
 
@@ -79,7 +77,8 @@ Velt Comment Dialog Composer Styling
 
 .velt-composer-open,
 .velt-comment-dialog--no-comments,
-.velt-composer-edit-mode {
+.velt-composer-edit-mode,
+.velt-inline-comments-section--composer-container {
   .notion-style-velt-composer-input-container {
     display: none !important;
   }
@@ -88,6 +87,29 @@ Velt Comment Dialog Composer Styling
     display: flex !important;
   }
 }
+
+.velt-inline-comments-section--composer-container, .velt-inline-comments-section--comments  {
+  .velt-comment-dialog {
+    width: auto !important;
+    box-shadow: none !important;
+  }
+}
+
+.velt-inline-comments-section--composer-container {
+  .notion-style-velt-composer-container {
+    padding-left: 16px !important;
+  }
+}
+
+.velt-inline-comments-section--comments {
+  gap: 10px !important;
+}
+
+.velt-inline-comments-section--comments.multi-thread {
+  margin-top: 10px !important;
+}
+
+
 
 /* ========================================================
 Velt Comments Sidebar Skeleton Styling
@@ -100,11 +122,13 @@ Velt Comments Sidebar Skeleton Styling
 
 .shine::before {
   animation: loading 1.5s infinite;
-  background: linear-gradient(90deg,
-      transparent,
-      var(--velt-comments-sidebar-skeleton-shine-color),
-      transparent);
-  content: '';
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--velt-comments-sidebar-skeleton-shine-color),
+    transparent
+  );
+  content: "";
   display: block;
   height: 100%;
   left: -150px;
@@ -133,19 +157,12 @@ Velt Core Styling
 
 .velt-sidebar-container {
   background-color: transparent;
-  border-radius: 6px;
-  box-shadow:
-    0 4px 10px 0 rgba(18, 29, 43, 0.1),
-    0 0 2px 0 rgba(21, 30, 40, 0.2),
-    0 10px 20px 0 rgba(27, 30, 34, 0.16);
-  overflow: hidden;
-  padding: 0 !important;
   height: 100% !important;
   padding: 8px !important;
 }
 
 .velt-sidebar {
-  border: 0 !important;
+  border-radius: 4px !important;
 }
 
 .velt-comment-sidebar-panel {
@@ -154,11 +171,11 @@ Velt Core Styling
   gap: 0 !important;
 }
 
-snippyly-comment-pin-portal[data-velt-element='true'] {
+snippyly-comment-pin-portal[data-velt-element="true"] {
   z-index: auto !important;
 }
 
-velt-comment-text[comment-available='true'] {
+velt-comment-text[comment-available="true"] {
   background-color: #edf8ff;
   border-bottom: 2px solid var(--color-selection-200, #ddf1fe);
 }
@@ -291,7 +308,7 @@ app-comment-dialog-thread-card-avatar {
   width: 199px !important;
 }
 
-.mat-mdc-menu-content>div:first-child {
+.mat-mdc-menu-content > div:first-child {
   box-sizing: border-box !important;
   width: 100% !important;
 }
@@ -324,6 +341,23 @@ app-comment-dialog-thread-card-avatar {
   padding-left: 41px !important;
 }
 
+.velt-toggle-reply--button-inline-mode {
+  border: 0 !important;
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 42px !important;
+
+  svg {
+    display: none !important;
+  }
+}
+
 app-comment-dialog-toggle-reply-icon {
   display: none !important;
 }
@@ -349,13 +383,20 @@ app-comment-sidebar-header {
   padding-bottom: 0 !important;
 }
 
+.velt-inline-comments-section {
+  padding: 0 !important;
+  padding: 20px 18px 36px 36px !important;
+}
+
 /* Hide the app-comment-dialog-thread-card-reaction-tool by default */
 .velt-thread-card--reactions app-comment-dialog-thread-card-reaction-tool {
   display: none !important;
 }
 
 /* Show app-comment-dialog-thread-card-reaction-tool if app-reaction-pin is present */
-.velt-thread-card--reactions app-reaction-pin+app-comment-dialog-thread-card-reaction-tool {
+.velt-thread-card--reactions
+  app-reaction-pin
+  + app-comment-dialog-thread-card-reaction-tool {
   display: block !important;
 }
 
@@ -370,7 +411,7 @@ app-comment-sidebar-header {
   }
 }
 
-app-comment-dialog-threads> :not(:first-child) {
+app-comment-dialog-threads > :not(:first-child) {
   padding-left: 26px;
 }
 
@@ -452,7 +493,8 @@ velt-comment-dialog-copy-link-wireframe {
   }
 }
 
-mat-dialog-container .mat-mdc-dialog-surface.mdc-dialog__surface:has(snippyly-confirm-dialog) {
+mat-dialog-container
+  .mat-mdc-dialog-surface.mdc-dialog__surface:has(snippyly-confirm-dialog) {
   border-radius: 0.375rem !important;
 }
 
@@ -519,10 +561,8 @@ app-comment-dialog-composer-avatar {
 .velt-status-dropdown--content {
   background: #fff !important;
   border-radius: 6px !important;
-  box-shadow:
-    0 4px 10px 0 rgba(18, 29, 43, 0.1),
-    0 0 2px 0 rgba(21, 30, 40, 0.2),
-    0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
   padding: 4px !important;
   width: auto !important;
 }
@@ -541,25 +581,23 @@ app-comment-dialog-thread-card-reaction-tool {
 
 .mat-mdc-menu-panel {
   border-radius: 6px !important;
-  box-shadow:
-    0 4px 10px 0 rgba(18, 29, 43, 0.1),
-    0 0 2px 0 rgba(21, 30, 40, 0.2),
-    0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
 }
 
 .velt-autocomplete-panel--autocomplete {
   border-radius: 6px !important;
-  box-shadow:
-    0 4px 10px 0 rgba(18, 29, 43, 0.1),
-    0 0 2px 0 rgba(21, 30, 40, 0.2),
-    0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
 }
 
 .velt-autocomplete--contact-chip {
   font-size: inherit !important;
 }
 
-.velt-autocomplete-panel--autocomplete .velt-autocomplete-panel--container .mat-mdc-option.mat-mdc-option-active {
+.velt-autocomplete-panel--autocomplete
+  .velt-autocomplete-panel--container
+  .mat-mdc-option.mat-mdc-option-active {
   background-color: #eff1f5 !important;
 }
 

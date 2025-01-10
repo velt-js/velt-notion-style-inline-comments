@@ -34,7 +34,7 @@ import NotionStyleVeltButton from './NotionStyleVeltButton';
 const VeltCommentDialogComposer = () => {
   return (
     <VeltCommentDialogWireframe.Composer>
-      <div className="box-border flex justify-center gap-1.5 p-1.5 w-full pl-[22px]">
+      <div className="notion-style-velt-composer-container box-border flex justify-center gap-1.5 p-1.5 w-full pl-[22px]">
         <VeltIf condition="!{editMode}">
           <VeltCommentDialogWireframe.Composer.Avatar />
         </VeltIf>
