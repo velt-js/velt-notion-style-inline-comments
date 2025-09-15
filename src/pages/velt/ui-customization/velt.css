@@ -1,0 +1,768 @@
+/* ========================================================
+Velt Comment Dialog Styling
+======================================================== */
+
+.notion-style-velt-thread-card {
+  padding: 12px 6px 6px !important;
+}
+
+.velt-comment-dialog-body--closed {
+  &:hover {
+    background: var(--Gray-100, #f7f8fa) !important;
+    border-radius: 4px !important;
+  }
+}
+
+.velt-thread-card--edit-mode {
+  .notion-style-velt-thread-card {
+    padding-bottom: 0 !important;
+  }
+}
+
+.notion-style-velt-thread-card {
+  &:hover {
+    background: var(--Gray-100, #f7f8fa) !important;
+    border-radius: 4px !important;
+  }
+}
+
+.notion-style-velt-context-data-container:has(app-data:empty) {
+  display: none !important;
+}
+
+.notion-style-velt-thread-card-actions {
+  box-shadow: 0 0 1px 0 rgba(69, 81, 97, 0.24),
+    0 2px 4px 0 rgba(69, 81, 97, 0.14) !important;
+}
+
+.velt-thread-card--container {
+  &:hover {
+    .notion-style-velt-thread-card-actions {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.velt-thread-card--show-actions {
+  .notion-style-velt-thread-card-actions {
+    opacity: 1 !important;
+  }
+}
+
+/* ========================================================
+Velt Comment Dialog Composer Styling
+======================================================== */
+
+.notion-style-velt-composer-input-container {
+  .velt-composer-input--message {
+    padding: 0 !important;
+  }
+}
+
+.notion-style-velt-composer-input-container-open {
+  .velt-composer--submit-button {
+    padding-right: 4px !important;
+    background-color: transparent !important;
+
+    svg {
+      height: 16px !important;
+      width: 16px !important;
+    }
+  }
+}
+
+.velt-composer-open,
+.velt-comment-dialog--no-comments,
+.velt-composer-edit-mode,
+.velt-inline-comments-section--composer-container {
+  .notion-style-velt-composer-input-container {
+    display: none !important;
+  }
+
+  .notion-style-velt-composer-input-container-open {
+    display: flex !important;
+  }
+}
+
+.velt-inline-comments-section--composer-container, .velt-inline-comments-section--comments  {
+  .velt-comment-dialog {
+    width: auto !important;
+    box-shadow: none !important;
+  }
+}
+
+.velt-inline-comments-section--composer-container {
+  .notion-style-velt-composer-container {
+    padding-left: 16px !important;
+  }
+}
+
+.velt-inline-comments-section--comments {
+  gap: 10px !important;
+
+  .notion-style-velt-composer-container {
+    padding-top: 20px !important;
+  }
+}
+
+.velt-inline-comments-section--comments.multi-thread {
+  margin-top: 10px !important;
+}
+
+
+
+/* ========================================================
+Velt Comments Sidebar Skeleton Styling
+======================================================== */
+.shine {
+  background-color: var(--velt-comments-sidebar-skeleton-bg-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.shine::before {
+  animation: loading 1.5s infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--velt-comments-sidebar-skeleton-shine-color),
+    transparent
+  );
+  content: "";
+  display: block;
+  height: 100%;
+  left: -150px;
+  position: absolute;
+  top: 0;
+  width: 150px;
+}
+
+@keyframes loading {
+  0% {
+    left: -150px;
+  }
+
+  50% {
+    left: 100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+/* ========================================================
+Velt Core Styling
+======================================================== */
+
+.velt-sidebar-container {
+  background-color: transparent;
+  height: 100% !important;
+  padding: 8px !important;
+}
+
+.velt-sidebar {
+  border-radius: 4px !important;
+}
+
+.velt-comment-sidebar-panel {
+  background-color: #fff;
+  border-radius: 0 !important;
+  gap: 0 !important;
+}
+
+snippyly-comment-pin-portal[data-velt-element="true"] {
+  z-index: auto !important;
+}
+
+velt-comment-text[comment-available="true"] {
+  background-color: #edf8ff;
+  border-bottom: 2px solid var(--color-selection-200, #ddf1fe);
+}
+
+.velt-comment-dialog {
+  border-width: 0 !important;
+  padding: 0 !important;
+}
+
+.velt-user-avatar {
+  height: 20px !important;
+  width: 20px !important;
+}
+
+.velt-thread-card--name {
+  color: var(--Gray-600, #464a53) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 16px !important;
+  margin-left: 1px !important;
+}
+
+.velt-thread-card--time {
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+}
+
+app-comment-dialog-thread-card-avatar {
+  align-self: center !important;
+}
+
+.velt-thread-card--message {
+  color: var(--Gray-600, #464a53) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 18px !important;
+  margin: 0 !important;
+  max-width: 600px !important;
+  padding: 0 0 0 37px !important;
+}
+
+.s-emoji-block {
+  margin: 0 !important;
+  padding-block: 0 !important;
+  padding-left: 36px !important;
+  padding-top: 8px !important;
+}
+
+.action-btn {
+  border: 0 !important;
+  padding: 2px !important;
+
+  svg {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+
+.velt-reaction-pin--default {
+  background: var(--Gray-100, #f7f8fa) !important;
+  border: 1px solid var(--Selection-500, #18a0fb) !important;
+  border-radius: 6px !important;
+  color: var(--Selection-500, #18a0fb) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 16px !important;
+
+  padding: 4px 6px 4px 4px !important;
+
+  &.active {
+    background: var(--Selection-100, #f5fbff) !important;
+  }
+
+  svg {
+    height: 12px !important;
+    width: 12px !important;
+  }
+}
+
+.velt-comment-pin--popover {
+  border-color: transparent #18a0fb transparent transparent !important;
+  border-width: 0 10px 10px 0 !important;
+}
+
+.velt-composer-input--message {
+  font-size: 12px !important;
+  padding: 0 !important;
+  padding-left: 6px !important;
+}
+
+.velt-composer-input--message::placeholder {
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  word-break: break-word !important;
+}
+
+.action__button {
+  padding: 0 !important;
+}
+
+.velt-composer--attachments {
+  padding: 6px !important;
+
+  &:empty {
+    display: none !important;
+  }
+}
+
+.mat-mdc-menu-content {
+  align-items: center !important;
+  background: var(--Gray-White, #fff) !important;
+  border-radius: 6px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 199px !important;
+}
+
+.mat-mdc-menu-content > div:first-child {
+  box-sizing: border-box !important;
+  width: 100% !important;
+}
+
+.__button {
+  height: auto !important;
+  width: auto !important;
+
+  &:hover {
+    background: none !important;
+  }
+}
+
+.s-tooltiptext {
+  display: none !important;
+}
+
+.velt-toggle-reply {
+  padding-bottom: 8px !important;
+  padding-top: 4px !important;
+}
+
+.velt-toggle-reply--button {
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 16px !important;
+  padding-left: 41px !important;
+}
+
+.velt-toggle-reply--button-inline-mode {
+  border: 0 !important;
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 42px !important;
+
+  svg {
+    display: none !important;
+  }
+}
+
+app-comment-dialog-toggle-reply-icon {
+  display: none !important;
+}
+
+.velt-sidebar--comments-hr {
+  display: none !important;
+}
+
+app-comment-sidebar-list {
+  padding: 0 !important;
+}
+
+.velt-sidebar--comments-block {
+  margin: 0 !important;
+}
+
+.v-reaction-btn-container {
+  display: flex !important;
+}
+
+app-comment-sidebar-header {
+  padding: 6px !important;
+  padding-bottom: 0 !important;
+}
+
+.velt-inline-comments-section {
+  padding: 0 !important;
+  padding: 20px 18px 36px 36px !important;
+}
+
+/* Hide the app-comment-dialog-thread-card-reaction-tool by default */
+.velt-thread-card--reactions app-comment-dialog-thread-card-reaction-tool {
+  display: none !important;
+}
+
+/* Show app-comment-dialog-thread-card-reaction-tool if app-reaction-pin is present */
+.velt-thread-card--reactions
+  app-reaction-pin
+  + app-comment-dialog-thread-card-reaction-tool {
+  display: block !important;
+}
+
+/* Hide the .velt-thread-card--reactions if app-reaction-pin is not present */
+.velt-thread-card--reactions:not(:has(app-reaction-pin)) {
+  display: none !important;
+}
+
+.velt-thread-card--options {
+  velt-comment-dialog-thread-card-options-wireframe {
+    display: none !important;
+  }
+}
+
+app-comment-dialog-threads > :not(:first-child) {
+  padding-left: 26px;
+}
+
+app-comment-dialog-composer {
+  display: flex !important;
+  padding-left: 28px;
+}
+
+.velt-comment-dialog--dialog-mode {
+  app-comment-dialog-composer {
+    margin-bottom: 4px !important;
+    padding-left: 24px !important;
+  }
+}
+
+.velt-comment-dialog--dialog-mode.no-comments {
+  app-comment-dialog-composer {
+    padding-left: 0 !important;
+  }
+}
+
+.velt-hidden-count {
+  color: var(--Gray-500, #949dad) !important;
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.velt-reaction-pin-tooltip {
+  background-color: var(--Surface-Neutral-0, #fff) !important;
+  border: 0 !important;
+  border-radius: var(--Icon-Size-Small, 12px) !important;
+  box-shadow: 0 4px 21px 0 rgba(0, 0, 0, 0.08) !important;
+
+  color: var(--Text-Neutral-0, #0a0a0a) !important;
+  font-family: Urbanist, sans-serif !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  opacity: 1 !important;
+}
+
+velt-comment-pin-bubble-internal {
+  padding-right: 4px;
+}
+
+.velt-comment-dialog-options-dropdown:hover {
+  background: none !important;
+}
+
+.v-dropdown-menu-trigger:hover {
+  background: none !important;
+}
+
+.__button.s-tooltip {
+  width: 100% !important;
+}
+
+.action__button.velt-action-button {
+  background: none !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+velt-comment-dialog-copy-link-wireframe {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.velt-composer--submit-button {
+  color: var(--Selection-500, #18a0fb) !important;
+  background-color: none !important;
+
+  &:disabled {
+    color: #949dad !important;
+  }
+}
+
+mat-dialog-container
+  .mat-mdc-dialog-surface.mdc-dialog__surface:has(snippyly-confirm-dialog) {
+  border-radius: 0.375rem !important;
+}
+
+.velt-confirm-dialog--reject {
+  background-color: #fff !important;
+  border: 1px solid #dee3eb !important;
+  border-radius: 0.375rem !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+
+  &:hover {
+    background-color: #eff1f5 !important;
+  }
+}
+
+.velt-confirm-dialog--approve {
+  background-color: #ddf1fe !important;
+  border: 1px solid #ddf1fe !important;
+  border-radius: 0.375rem !important;
+  color: #18a0fb !important;
+  font-weight: 500 !important;
+
+  &:hover {
+    background-color: #18a0fb !important;
+    border: 1px solid #18a0fb !important;
+    color: #fff !important;
+  }
+}
+
+.here-chip {
+  background-color: #ddf1fe !important;
+  color: #18a0fb !important;
+}
+
+app-comment-dialog-body {
+  max-height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  width: 100% !important;
+}
+
+velt-comment-dialog-composer-action-button-wireframe {
+  display: flex !important;
+}
+
+app-comment-dialog-composer-avatar {
+  margin-top: 6px !important;
+}
+
+.velt-comment-attachments:not(:empty) {
+  padding-left: 36px !important;
+}
+
+.velt-comment-dialog--sidebar-mode {
+  .velt-body {
+    padding: 0 6px 6px !important;
+  }
+}
+
+.velt-body {
+  max-height: initial !important;
+}
+
+.velt-status-dropdown--content {
+  background: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+  padding: 4px !important;
+  width: auto !important;
+}
+
+app-comment-dialog-threads {
+  gap: 0 !important;
+}
+
+app-comment-dialog-thread-card-options,
+app-copy-link,
+app-resolve-button,
+app-unresolve-button,
+app-comment-dialog-thread-card-reaction-tool {
+  opacity: 1 !important;
+}
+
+.mat-mdc-menu-panel {
+  border-radius: 6px !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+}
+
+.velt-autocomplete-panel--autocomplete {
+  border-radius: 6px !important;
+  box-shadow: 0 4px 10px 0 rgba(18, 29, 43, 0.1),
+    0 0 2px 0 rgba(21, 30, 40, 0.2), 0 10px 20px 0 rgba(27, 30, 34, 0.16) !important;
+}
+
+.velt-autocomplete--contact-chip {
+  font-size: inherit !important;
+}
+
+.velt-autocomplete-panel--autocomplete
+  .velt-autocomplete-panel--container
+  .mat-mdc-option.mat-mdc-option-active {
+  background-color: #eff1f5 !important;
+}
+
+.velt-autocomplete-panel--container .mat-mdc-option:hover {
+  background-color: #eff1f5 !important;
+}
+
+.velt-autocomplete-option-name {
+  font-size: 12px !important;
+}
+
+.velt-autocomplete-option-description {
+  font-size: 10px !important;
+}
+
+.mat-mdc-autocomplete-panel-above {
+  width: 250px !important;
+}
+
+.snippyly-menu .mat-mdc-menu-content {
+  border: 0 !important;
+}
+
+app-comment-dialog-thread-card-draft {
+  span {
+    background-color: #eff1f5 !important;
+    border-radius: 4px !important;
+    color: #464a53 !important;
+    font-size: 8px !important;
+    letter-spacing: 0.5px !important;
+    opacity: 0.7 !important;
+    padding: 4px 6px !important;
+  }
+}
+
+app-if {
+  align-items: flex-start !important;
+
+  &:empty {
+    display: none !important;
+  }
+}
+
+snippyly-confirm-dialog {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  padding: 12px !important;
+  width: 300px !important;
+}
+
+velt-confirm-dialog-wireframe {
+  align-items: flex-start !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+
+.velt-confirm-dialog {
+  width: auto !important;
+  padding: 0 !important;
+}
+
+velt-confirm-dialog-title-wireframe {
+  color: var(--color-carbon-600, #464a53) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+}
+
+velt-confirm-dialog-message-wireframe {
+  color: var(--Gray-500, var(--color-carbon-500, #949dad)) !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  letter-spacing: normal !important;
+  line-height: normal !important;
+}
+
+app-confirm-dialog-message {
+  .mat-mdc-dialog-content {
+    line-height: normal !important;
+    margin: 0 !important;
+  }
+}
+
+app-confirm-dialog-reject {
+  flex: none !important;
+}
+
+app-confirm-dialog-approve {
+  flex: none !important;
+}
+
+velt-confirm-dialog-reject-button-wireframe {
+  align-items: center !important;
+  background: var(--color-carbon-0, #fff) !important;
+  border: 1px solid var(--color-carbon-300, #dce1ea) !important;
+  border-radius: 6px;
+  box-shadow: 0 1px 0 0 rgba(34, 45, 68, 0.04) !important;
+  color: var(--color-carbon-600, #464a53) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  gap: 4px !important;
+  justify-content: center !important;
+  line-height: 16px !important;
+  padding: 6px 8px !important;
+  transition: all 0.2s ease-in-out !important;
+
+  &:hover {
+    background: var(--color-carbon-200, #eff1f5) !important;
+  }
+}
+
+velt-confirm-dialog-approve-button-wireframe {
+  align-items: center !important;
+  background: var(--color-red-200, #fddad3) !important;
+  border: 1px solid var(--color-red-200, #fddad3) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 0 0 rgba(215, 239, 254, 0.25) !important;
+  color: var(--text-failure, #f75e4a) !important;
+  cursor: pointer !important;
+  display: flex !important;
+  font-family: Inter, sans-serif !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  gap: 4px !important;
+  justify-content: center !important;
+  line-height: 16px !important;
+  padding: 6px 8px !important;
+  transition: all 0.2s ease-in-out !important;
+
+  &:hover {
+    background: var(--color-red-300, #fcbfb5) !important;
+    border: 1px solid var(--color-red-300, #fcbfb5) !important;
+  }
+}
+
+velt-if {
+  width: 100% !important;
+}
+
+.velt-sidebar--no-comments-container {
+  margin: 0 !important;
+}
+
+app-comment-sidebar-header {
+  display: none !important;
+}
+
+.velt-tooltip-button {
+    justify-content: flex-start !important;
+    border-radius: 0.375rem !important;
+
+    :hover {
+        background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+    }
+}
