@@ -51,9 +51,9 @@ export default function Dashboard() {
     return (
         <div >
             <VeltComments shadowDom={false} />
-            <VeltCommentsSidebar pageMode={true} shadowDom={false} />
+{/*             <VeltCommentsSidebar pageMode={true} shadowDom={false} /> */}
             <div className="flex items-center gap-4 p-8">
-                <VeltSidebarButton />
+{/*                 <VeltSidebarButton /> */}
                 <h1 className="text-black text-2xl font-bold">Velt - Notion like comments</h1>
             </div>
 
