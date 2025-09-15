@@ -761,3 +761,12 @@ velt-if {
 app-comment-sidebar-header {
   display: none !important;
 }
+
+.velt-tooltip-button {
+    justify-content: flex-start !important;
+    border-radius: 0.375rem !important;
+
+    :hover {
+        background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+    }
+}

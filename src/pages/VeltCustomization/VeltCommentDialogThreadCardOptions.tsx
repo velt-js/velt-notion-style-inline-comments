@@ -12,7 +12,7 @@ const VeltOptionsTrigger = () => {
 const NotionStyleVeltThreadCardOptionItem = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
-      className="notion-style-thread-card-option-item rounded-md text-gray-600 cursor-pointer font-inter text-sm font-medium leading-4 p-1.5 hover:bg-gray-200"
+      className="notion-style-thread-card-option-item rounded-md text-gray-600 cursor-pointer font-inter text-sm font-medium leading-4 p-1.5 hover:bg-gray-200 w-full text-left"
     >
       {children}
     </div>
