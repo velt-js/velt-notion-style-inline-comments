@@ -7,9 +7,9 @@ export default function Dashboard() {
     useEffect(() => {
         if (veltButtonClickEventData) {
             if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'option-1') {
-                console.log('Option 1 pressed');
+                console.log('Option 1 clicked');
             } else if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'option-2') {
-                console.log('Option 2 pressed');
+                console.log('Option 2 clicked');
             }
         }
     }, [veltButtonClickEventData]);

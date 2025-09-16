@@ -1,4 +1,4 @@
-import { VeltCommentDialogWireframe } from '@veltdev/react';
+import { VeltButtonWireframe, VeltCommentDialogWireframe } from '@veltdev/react';
 import NotionStyleVeltButton from './NotionStyleVeltButton';
 
 const VeltOptionsTrigger = () => {
@@ -31,6 +31,12 @@ const VeltCommentDialogThreadCardOptions = () => {
         <div
           className="notion-style-velt-thread-card-options-content text-gray-600 font-inter text-sm font-medium leading-4 p-1.5 flex flex-col"
         >
+          <VeltButtonWireframe id="option-1" type="button">
+            <NotionStyleVeltThreadCardOptionItem>Option 1</NotionStyleVeltThreadCardOptionItem>
+          </VeltButtonWireframe>
+          <VeltButtonWireframe id="option-2" type="button">
+            <NotionStyleVeltThreadCardOptionItem>Option 2</NotionStyleVeltThreadCardOptionItem>
+          </VeltButtonWireframe>
           <VeltCommentDialogWireframe.ThreadCard.Options.Content.Edit>
             <NotionStyleVeltThreadCardOptionItem>Edit</NotionStyleVeltThreadCardOptionItem>
           </VeltCommentDialogWireframe.ThreadCard.Options.Content.Edit>

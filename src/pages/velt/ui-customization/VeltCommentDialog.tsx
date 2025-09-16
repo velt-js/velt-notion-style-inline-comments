@@ -100,35 +100,7 @@ const VeltCommentDialog = () => {
                                                 </NotionStyleVeltButton>
                                             </VeltCommentDialogWireframe.UnresolveButton>
                                         </VeltIf>
-                                        <VeltCommentDialogWireframe.ThreadCard.Options>
-                                            <VeltCommentDialogWireframe.ThreadCard.Options.Trigger />
-                                            <VeltCommentDialogWireframe.ThreadCard.Options.Content>
-                                                <VeltButtonWireframe id="option-1" type="button">
-                                                    <span className="custom-item">
-                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M18.2609 9V6.30416C18.2609 5.24761 17.4044 4.39111 16.3478 4.39111H3.91304C2.8565 4.39111 2 5.24761 2 6.30416V14.9129C2 15.9694 2.8565 16.8259 3.91304 16.8259H7.5" stroke="#626262" strokeWidth="2" />
-                                                            <path d="M4.5 7H6.17391" stroke="#626262" strokeWidth="2" strokeLinecap="round" />
-                                                            <rect x="7.21752" y="8.65209" width="15.3043" height="11.4783" rx="1.43478" stroke="#636363" strokeWidth="2" />
-                                                            <line x1="10.2062" y1="11.4022" x2="11.8801" y2="11.4022" stroke="#626262" strokeWidth="2" strokeLinecap="round" />
-                                                        </svg>
-                                                        <span>Option 1</span>
-                                                    </span>
-                                                </VeltButtonWireframe>
-                                                <VeltButtonWireframe id="option-2" type="button">
-                                                    <span className="custom-item">
-                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M18.2609 9V6.30416C18.2609 5.24761 17.4044 4.39111 16.3478 4.39111H3.91304C2.8565 4.39111 2 5.24761 2 6.30416V14.9129C2 15.9694 2.8565 16.8259 3.91304 16.8259H7.5" stroke="#626262" strokeWidth="2" />
-                                                            <path d="M4.5 7H6.17391" stroke="#626262" strokeWidth="2" strokeLinecap="round" />
-                                                            <rect x="7.21752" y="8.65209" width="15.3043" height="11.4783" rx="1.43478" stroke="#636363" strokeWidth="2" />
-                                                            <line x1="10.2062" y1="11.4022" x2="11.8801" y2="11.4022" stroke="#626262" strokeWidth="2" strokeLinecap="round" />
-                                                        </svg>
-                                                        <span>Option 2</span>
-                                                    </span>
-                                                </VeltButtonWireframe>
-                                                <VeltCommentDialogWireframe.ThreadCard.Options.Content.Delete />
-                                                <VeltCommentDialogWireframe.ThreadCard.Options.Content.Edit />
-                                            </VeltCommentDialogWireframe.ThreadCard.Options.Content>
-                                        </VeltCommentDialogWireframe.ThreadCard.Options>
+                                        <VeltCommentDialogWireframe.ThreadCard.Options />
                                     </div>
                                 </div>
                                 <VeltIf condition="{sidebarMode}">
