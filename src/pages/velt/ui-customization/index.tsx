@@ -5,8 +5,6 @@ import VeltCommentDialogComposer from './VeltCommentDialogComposer';
 import VeltCommentDialogThreadCardOptions from './VeltCommentDialogThreadCardOptions';
 import VeltCommentsSidebarEmptyPlaceholder from './VeltCommentsSidebarEmptyPlaceholder';
 import VeltCommentsSidebarSkeleton from './VeltCommentsSidebarSkeleton';
-import VeltConfirmDialogComment from './VeltConfirmDialogComment';
-import VeltConfirmDialogReply from './VeltConfirmDialogReply';
 
 const VeltCustomization = () => {
   return (
@@ -15,8 +13,6 @@ const VeltCustomization = () => {
       <VeltCommentDialog />
       <VeltCommentsSidebarSkeleton />
       <VeltCommentsSidebarEmptyPlaceholder />
-      <VeltConfirmDialogComment />
-      <VeltConfirmDialogReply />
       <VeltCommentDialogThreadCardOptions />
     </VeltWireframe>
   );

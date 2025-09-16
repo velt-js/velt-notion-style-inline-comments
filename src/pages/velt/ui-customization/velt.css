@@ -84,7 +84,8 @@ Velt Comment Dialog Composer Styling
   }
 }
 
-.velt-inline-comments-section--composer-container, .velt-inline-comments-section--comments  {
+.velt-inline-comments-section--composer-container,
+.velt-inline-comments-section--comments {
   .velt-comment-dialog {
     width: auto !important;
     box-shadow: none !important;
@@ -108,8 +109,6 @@ Velt Comment Dialog Composer Styling
 .velt-inline-comments-section--comments.multi-thread {
   margin-top: 10px !important;
 }
-
-
 
 /* ========================================================
 Velt Comments Sidebar Skeleton Styling
@@ -493,37 +492,6 @@ velt-comment-dialog-copy-link-wireframe {
   }
 }
 
-mat-dialog-container
-  .mat-mdc-dialog-surface.mdc-dialog__surface:has(snippyly-confirm-dialog) {
-  border-radius: 0.375rem !important;
-}
-
-.velt-confirm-dialog--reject {
-  background-color: #fff !important;
-  border: 1px solid #dee3eb !important;
-  border-radius: 0.375rem !important;
-  color: #000 !important;
-  font-weight: 500 !important;
-
-  &:hover {
-    background-color: #eff1f5 !important;
-  }
-}
-
-.velt-confirm-dialog--approve {
-  background-color: #ddf1fe !important;
-  border: 1px solid #ddf1fe !important;
-  border-radius: 0.375rem !important;
-  color: #18a0fb !important;
-  font-weight: 500 !important;
-
-  &:hover {
-    background-color: #18a0fb !important;
-    border: 1px solid #18a0fb !important;
-    color: #fff !important;
-  }
-}
-
 .here-chip {
   background-color: #ddf1fe !important;
   color: #18a0fb !important;
@@ -641,111 +609,6 @@ app-if {
   }
 }
 
-snippyly-confirm-dialog {
-  align-items: flex-start !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  padding: 12px !important;
-  width: 300px !important;
-}
-
-velt-confirm-dialog-wireframe {
-  align-items: flex-start !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 8px !important;
-  width: 100% !important;
-}
-
-.velt-confirm-dialog {
-  width: auto !important;
-  padding: 0 !important;
-}
-
-velt-confirm-dialog-title-wireframe {
-  color: var(--color-carbon-600, #464a53) !important;
-  font-family: Inter, sans-serif !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  line-height: normal !important;
-}
-
-velt-confirm-dialog-message-wireframe {
-  color: var(--Gray-500, var(--color-carbon-500, #949dad)) !important;
-  font-family: Inter, sans-serif !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  letter-spacing: normal !important;
-  line-height: normal !important;
-}
-
-app-confirm-dialog-message {
-  .mat-mdc-dialog-content {
-    line-height: normal !important;
-    margin: 0 !important;
-  }
-}
-
-app-confirm-dialog-reject {
-  flex: none !important;
-}
-
-app-confirm-dialog-approve {
-  flex: none !important;
-}
-
-velt-confirm-dialog-reject-button-wireframe {
-  align-items: center !important;
-  background: var(--color-carbon-0, #fff) !important;
-  border: 1px solid var(--color-carbon-300, #dce1ea) !important;
-  border-radius: 6px;
-  box-shadow: 0 1px 0 0 rgba(34, 45, 68, 0.04) !important;
-  color: var(--color-carbon-600, #464a53) !important;
-  cursor: pointer !important;
-  display: flex !important;
-  font-family: Inter, sans-serif !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  gap: 4px !important;
-  justify-content: center !important;
-  line-height: 16px !important;
-  padding: 6px 8px !important;
-  transition: all 0.2s ease-in-out !important;
-
-  &:hover {
-    background: var(--color-carbon-200, #eff1f5) !important;
-  }
-}
-
-velt-confirm-dialog-approve-button-wireframe {
-  align-items: center !important;
-  background: var(--color-red-200, #fddad3) !important;
-  border: 1px solid var(--color-red-200, #fddad3) !important;
-  border-radius: 6px !important;
-  box-shadow: 0 1px 0 0 rgba(215, 239, 254, 0.25) !important;
-  color: var(--text-failure, #f75e4a) !important;
-  cursor: pointer !important;
-  display: flex !important;
-  font-family: Inter, sans-serif !important;
-  font-size: 14px !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  gap: 4px !important;
-  justify-content: center !important;
-  line-height: 16px !important;
-  padding: 6px 8px !important;
-  transition: all 0.2s ease-in-out !important;
-
-  &:hover {
-    background: var(--color-red-300, #fcbfb5) !important;
-    border: 1px solid var(--color-red-300, #fcbfb5) !important;
-  }
-}
-
 velt-if {
   width: 100% !important;
 }
@@ -759,10 +622,28 @@ app-comment-sidebar-header {
 }
 
 .velt-tooltip-button {
-    justify-content: flex-start !important;
-    border-radius: 0.375rem !important;
+  justify-content: flex-start !important;
+  border-radius: 0.375rem !important;
 
-    :hover {
-        background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-    }
+  :hover {
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+  }
+}
+
+.custom-item {
+  padding: var(--velt-spacing-lg);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--velt-spacing-sm);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--velt-font-size-xs);
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--velt-text-4);
+
+  &:hover {
+    background-color: var(--velt-background-2);
+  }
 }

@@ -1,6 +1,21 @@
-import { VeltComments, VeltInlineCommentsSection, VeltInlineReactionsSection } from "@veltdev/react";
+import { useVeltEventCallback, VeltComments, VeltInlineCommentsSection, VeltInlineReactionsSection } from "@veltdev/react";
+import { useEffect } from "react";
 
 export default function Dashboard() {
+    const veltButtonClickEventData = useVeltEventCallback('veltButtonClick');
+
+    useEffect(() => {
+        if (veltButtonClickEventData) {
+            if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'option-1') {
+                console.log('Option 1 pressed');
+            } else if (veltButtonClickEventData?.buttonContext?.clickedButtonId === 'option-2') {
+                console.log('Option 2 pressed');
+            }
+        }
+    }, [veltButtonClickEventData]);
+
+    
+
     return (
         <div >
             <VeltComments shadowDom={false} />
