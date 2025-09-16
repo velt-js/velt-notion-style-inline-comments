@@ -1,5 +1,6 @@
 import { VeltButtonWireframe, VeltCommentDialogWireframe } from '@veltdev/react';
 import NotionStyleVeltButton from './NotionStyleVeltButton';
+import {Button, ButtonGroup} from "@heroui/button";
 
 const VeltOptionsTrigger = () => {
   return <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +36,7 @@ const VeltCommentDialogThreadCardOptions = () => {
             <NotionStyleVeltThreadCardOptionItem>Option 1</NotionStyleVeltThreadCardOptionItem>
           </VeltButtonWireframe>
           <VeltButtonWireframe id="option-2" type="button">
-            <NotionStyleVeltThreadCardOptionItem>Option 2</NotionStyleVeltThreadCardOptionItem>
+            <Button color="primary">Option 2</Button>
           </VeltButtonWireframe>
           <VeltCommentDialogWireframe.ThreadCard.Options.Content.Edit>
             <NotionStyleVeltThreadCardOptionItem>Edit</NotionStyleVeltThreadCardOptionItem>

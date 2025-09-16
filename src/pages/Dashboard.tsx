@@ -1,3 +1,4 @@
+import { Button } from "@heroui/button";
 import { useVeltEventCallback, VeltComments, VeltInlineCommentsSection, VeltInlineReactionsSection } from "@veltdev/react";
 import { useEffect } from "react";
 
